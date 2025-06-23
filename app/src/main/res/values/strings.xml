@@ -1,5 +1,14 @@
 <resources>
     <string name="app_name">ToDoApp</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="mainScreenTitle">ToDo</string>
+
+    <string name="saveScreenTitle">Todo Add</string>
+    <string name="saveScreenHintText">Enter Todo</string>
+    <string name="saveScreenButtonText">SAVE</string>
+
+    <string name="updateScreenTitle">Todo Detail</string>
+    <string name="updateScreenButtonText">UPDATE</string>
+    <string name="updateScreenHintText">Todo Name</string>
+
 </resources>
