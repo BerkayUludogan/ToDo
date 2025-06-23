@@ -19,4 +19,8 @@ class TodoDataSource @Inject constructor(private val todoDAO: TodoDAO) {
     suspend fun deleteTodo(id: Int) = todoDAO.deleteTodo(id)
 
     suspend fun updateName(id: Int, name: String) = todoDAO.updateTodo(id, name)
+
+    suspend fun search(searchText: String): List<Todo> = withContext(Dispatchers.IO) {
+        todoDAO.search(searchText)
+    }
 }

@@ -19,4 +19,7 @@ interface TodoDAO {
 
     @Query("UPDATE todo set name =:name WHERE id = :id")
     suspend fun updateTodo(id: Int, name: String)
+
+    @Query("SELECT * FROM todo WHERE name LIKE '%' || :searchText || '%'")
+    suspend fun search(searchText: String): List<Todo>
 }

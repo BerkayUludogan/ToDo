@@ -35,4 +35,10 @@ class MainViewmodel @Inject constructor(
             loadTodos()
         }
     }
+
+    fun search(searchText: String) {
+        viewModelScope.launch(Dispatchers.Main) {
+            _todoList.value = todoRepository.search(searchText)
+        }
+    }
 }
