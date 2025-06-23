@@ -1,6 +1,5 @@
 package com.berkayuludogan.todoapp.ui.viewmodel
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.berkayuludogan.todoapp.data.repository.TodoRepository
@@ -17,8 +16,6 @@ class SaveViewmodel @Inject constructor(
         viewModelScope.launch(Dispatchers.IO) {
             todoRepository.save(name)
         }
-
-
     }
 
 }

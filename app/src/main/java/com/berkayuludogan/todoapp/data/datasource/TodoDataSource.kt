@@ -15,4 +15,6 @@ class TodoDataSource @Inject constructor(private val todoDAO: TodoDAO) {
     suspend fun loadTodos(): List<Todo> = withContext(Dispatchers.IO) {
         todoDAO.loadTodo()
     }
+
+    suspend fun deleteTodo(id: Int) = todoDAO.deleteTodo(id)
 }

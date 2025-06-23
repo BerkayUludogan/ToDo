@@ -1,6 +1,7 @@
 package com.berkayuludogan.todoapp.room
 
 import androidx.room.Dao
+import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import com.berkayuludogan.todoapp.data.entity.Todo
@@ -12,4 +13,7 @@ interface TodoDAO {
 
     @Insert
     suspend fun insertTodo(todo: Todo)
+
+    @Query("DELETE  FROM todo WHERE id = :id")
+    suspend fun deleteTodo(id: Int)
 }
