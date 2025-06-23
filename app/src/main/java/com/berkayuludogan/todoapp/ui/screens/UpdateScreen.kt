@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.navArgs
 import com.berkayuludogan.todoapp.R
 import com.berkayuludogan.todoapp.databinding.UpdateScreenBinding
 import com.berkayuludogan.todoapp.ui.viewmodel.UpdateViewmodel
@@ -20,6 +22,13 @@ class UpdateScreen : Fragment() {
         savedInstanceState: Bundle?,
     ): View? {
         binding = UpdateScreenBinding.inflate(inflater, container, false)
+        val bundle: UpdateScreenArgs by navArgs()
+        val todo = bundle.todo
+        binding.updateScreenText.setText(todo.name)
+        binding.updateButton.setOnClickListener {
+            viewModel.updateName(todo.id, binding.updateScreenText.text.toString())
+            it.findNavController().popBackStack()
+        }
         return binding.root
     }
 

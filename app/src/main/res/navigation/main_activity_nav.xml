@@ -26,5 +26,9 @@
         android:id="@+id/updateScreen"
         android:name="com.berkayuludogan.todoapp.ui.screens.UpdateScreen"
         android:label="update_screen"
-        tools:layout="@layout/update_screen" />
+        tools:layout="@layout/update_screen" >
+        <argument
+            android:name="todo"
+            app:argType="com.berkayuludogan.todoapp.data.entity.Todo" />
+    </fragment>
 </navigation>

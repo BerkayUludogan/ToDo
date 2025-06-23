@@ -40,13 +40,14 @@
         app:layout_constraintTop_toBottomOf="@+id/updateScreenToolbar">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/updateScreenText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/updateScreenHintText" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/updateButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"

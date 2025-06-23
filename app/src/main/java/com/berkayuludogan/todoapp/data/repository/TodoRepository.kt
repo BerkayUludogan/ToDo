@@ -8,4 +8,5 @@ class TodoRepository @Inject constructor(private val todoDataSource: TodoDataSou
     suspend fun save(name: String) = todoDataSource.save(name)
     suspend fun loadTodos(): List<Todo> = todoDataSource.loadTodos()
     suspend fun deleteTodo(id: Int) = todoDataSource.deleteTodo(id)
+    suspend fun updateName(id: Int, name: String) = todoDataSource.updateName(id, name)
 }
